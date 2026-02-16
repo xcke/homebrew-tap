@@ -8,8 +8,6 @@ class Envref < Formula
   version "0.1.0"
   license "MIT"
 
-  depends_on "go" => :build
-
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/xcke/envref/releases/download/v0.1.0/envref_0.1.0_darwin_amd64.tar.gz"
