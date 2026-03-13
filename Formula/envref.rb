@@ -5,23 +5,23 @@
 class Envref < Formula
   desc "CLI tool for separating config from secrets in .env files"
   homepage "https://github.com/xcke/envref"
-  version "0.1.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/xcke/envref/releases/download/v0.1.0/envref_0.1.0_darwin_amd64.tar.gz"
-      sha256 "af1ac39bd913e4721eb03f364af0b52c757177967d48d9dce4b9166b15f987d7"
+      url "https://github.com/xcke/envref/releases/download/v0.3.0/envref_0.3.0_darwin_amd64.tar.gz"
+      sha256 "1805edd69918883a73079714919c5097d296c51c96ab6b9e6bfe7069774d97bc"
 
-      def install
+      define_method(:install) do
         bin.install "envref"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/xcke/envref/releases/download/v0.1.0/envref_0.1.0_darwin_arm64.tar.gz"
-      sha256 "55190ebd47585f11ca5b56f9755f2ff6576edc8f57181ee20d355703a4a88b8d"
+      url "https://github.com/xcke/envref/releases/download/v0.3.0/envref_0.3.0_darwin_arm64.tar.gz"
+      sha256 "f03144de3df55598e6ae8fddec4ea9217a03763b747684e8ad209a5ee1a48d8a"
 
-      def install
+      define_method(:install) do
         bin.install "envref"
       end
     end
@@ -29,16 +29,16 @@ class Envref < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xcke/envref/releases/download/v0.1.0/envref_0.1.0_linux_amd64.tar.gz"
-      sha256 "f04a90ab646db07801cf4ab579cc6de05bc4cae8fd833dffa879b21a67d83373"
-      def install
+      url "https://github.com/xcke/envref/releases/download/v0.3.0/envref_0.3.0_linux_amd64.tar.gz"
+      sha256 "5d973ff445af67a8998edca820e7bdc3753ca904549dc0529455eb7adb207d37"
+      define_method(:install) do
         bin.install "envref"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xcke/envref/releases/download/v0.1.0/envref_0.1.0_linux_arm64.tar.gz"
-      sha256 "98c196ac357c8efe2750cba25886edc9df56370a4810c283cfb2b2a5fc0ba94d"
-      def install
+      url "https://github.com/xcke/envref/releases/download/v0.3.0/envref_0.3.0_linux_arm64.tar.gz"
+      sha256 "41d563072c943da790d67560c75ee1567691ebfa107840fb26eb0e3c20f8d2fa"
+      define_method(:install) do
         bin.install "envref"
       end
     end
